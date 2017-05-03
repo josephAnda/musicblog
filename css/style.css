@@ -1,12 +1,20 @@
+* {
+	color: white;
+}
+
+body {
+	background-color: black;
+}
+
 ul.navList li {
 	display: inline;
 	padding-right: 1.5em;
 }
 
 p.infoText {
-	color: blue;
+	color: #2b7ab7;
 }
 
 p.about {
-	color: blue;
+	color: #2b7ab7;
 }

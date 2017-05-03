@@ -1,5 +1,7 @@
 //  [!!]  Write and render components for the remaining page elements
 //  [  ]  Determine the syntax for stateless components
+//  [  ]  Try to make it so information specific to particular components are passed through as props.  You can pass
+//        values to these props that are stored in global constants declared elsewhere or obtained from JSON
 //  [!!]  Create the bootstrap column structure for the webpage
 //  [  ]  Apply Bootstrap classes to clean up presentation
 //  [  ]  Determine abstraction for the text involved in the description 
@@ -22,11 +24,13 @@ var NavigationBar = React.createClass({
 		return (
 
 	//  Note that like the DOM, React uses the className property to assign CSS classes 
-			React.createElement('ul', {className: 'navList'}, 
-				React.createElement('li', {}, "Home"),
-				React.createElement('li', {}, "About"),
-				React.createElement('li', {}, "Archives")
-			
+			React.createElement('nav', {className: "navbar navbar-toggleable-md navbar-light bg-faded"}, 
+				React.createElement('ul', {className: "navList navbar-nav"}, 
+					React.createElement(NavItem, {itemName: "Home"}),
+					React.createElement(NavItem, {itemName: "About"}),
+					React.createElement(NavItem, {itemName: "Archives"})
+				
+				)
 			)
 		)
 	}
@@ -34,10 +38,16 @@ var NavigationBar = React.createClass({
 
 var NavItem = React.createClass({
 
+	propTypes: {
+		itemName: React.PropTypes.string.isRequired
+	},
+
 	render: function() {
 
 		return (
-			React.createElement('li', {})
+			React.createElement('li', {className: "nav-item"},
+				React.createElement('a', {className: "nav-link"}, this.props.itemName)
+			)
 		)
 	}
 });
@@ -130,7 +140,7 @@ var InfoRow = React.createClass({
 
 		return (
 			React.createElement('div', {className: "row"}, 
-				React.createElement('div', {className: "col-md-12"}, 
+				React.createElement('div', {className: "col-md-10 col-md-offset-1"}, 
 					React.createElement(InfoText, {
 						text:  this.props.textSource.infoText,
 						className: "infoText"
@@ -144,13 +154,43 @@ var InfoRow = React.createClass({
 var ArticleRow = React.createClass({
 
 	propTypes: {
+		articles: React.PropTypes.array.isRequired,
+	},
 
+	render: function() {
+
+		var formattedArticles = this.props.articles.map( function(post) {
+			return React.createElement(Article, post);
+		});
+
+		return (
+			React.createElement('div', {className: 'row'}, 
+				React.createElement('div', {className: "col-md-10 col-md-offset-1"},
+					React.createElement('ul', {className: "articleList"}, formattedArticles)
+				)
+			)
+		)
+		
+	}
+});
+
+var AboutRow = React.createClass({
+
+	propTypes: {
+		textSource:  React.PropTypes.object.isRequired
 	},
 
 	render: function() {
 
 		return (
 
+			React.createElement('div', {className: "row"},
+				React.createElement('div', {className: "col-md-10 col-md-offset-1"},
+				React.createElement(InfoText, {
+					text: this.props.textSource.about,
+					className: "about"
+				}))
+			)
 		)
 	}
 });
@@ -163,26 +203,13 @@ var BlogView = React.createClass({
 
 	render: function() {
 
-		var formattedArticles = this.props.articles.map( function(post) {
-			return React.createElement(Article, post);
-		});
 		//  The main structure of the page is organized below . . . this is the typical React pattern for rendering the top-level view
 		return (
 			React.createElement('div', {className: "BlogView"},
 				React.createElement(NavigationBar, {}),
 				React.createElement(InfoRow, {textSource:  this.props.textSource}), 
-				React.createElement('div', {className: 'row'}, 
-					React.createElement('div', {className: "col-md-12"},
-						React.createElement('ul', {className: "articleList"}, formattedArticles)
-					)
-				),
-				React.createElement('div', {className: "row"},
-					React.createElement('div', {className: "col-md-12"},
-					React.createElement(InfoText, {
-						text: this.props.textSource.about,
-						className: "about"
-					}))
-				)
+				React.createElement(ArticleRow, {articles:  this.props.articles}),
+				React.createElement(AboutRow, {textSource:  this.props.textSource})
 			)
 		)
 	}
