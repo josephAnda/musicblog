@@ -1,14 +1,17 @@
 //  [!!]  Write and render components for the remaining page elements
+//  [  ]  Add forms (use James K Nelson example)
+//  [  ]  Add an actual audio track that you've produced
+//  [  ]  Combine info and about row into a single component (they're way too similar)
 //  [  ]  Determine the syntax for stateless components
 //  [  ]  Try to make it so information specific to particular components are passed through as props.  You can pass
 //        values to these props that are stored in global constants declared elsewhere or obtained from JSON
 //  [!!]  Create the bootstrap column structure for the webpage
-//  [  ]  Apply Bootstrap classes to clean up presentation
+//  [!!]  Apply Bootstrap classes to clean up presentation
 //  [  ]  Determine abstraction for the text involved in the description 
 //  [!!]  Make track information a property of the article
 //  [  ]  Incorporate design pattern that filters and maps articles with and without tracks
 //  [  ]  Use JSX to clean up the code 
-//  [  ]  Incorporate state variable
+//  [  ]  Incorporate state variable (what changes in respone to user input?)
 //  [  ]  Incorporate JSON data
 
 (function() {
