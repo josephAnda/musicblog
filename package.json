@@ -1,0 +1,22 @@
+{
+  "name": "musicblog",
+  "version": "1.0.0",
+  "description": "music blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephAnda/musicblog.git"
+  },
+  "author": "Joseph Anda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/josephAnda/musicblog/issues"
+  },
+  "homepage": "https://github.com/josephAnda/musicblog#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
