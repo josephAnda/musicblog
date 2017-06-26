@@ -13,6 +13,21 @@
 
 (function() {
 
+
+//  UI components (that the user updates) should store their data in refs/props that are passed up to
+//  container components that can alter their internal state based on this information.  This is (again) the classic
+//  data handling design pattern for ReactJS
+
+//  Import React when its accessed via webpack as opposed to being
+//  made available globally via a script tag.  Require is via npm
+
+var React = require('react');
+var ReactDOM = require('react-dom');
+
+//  e.g. Creates the variable 'Route' and sets it equal to the Route property of whatever 
+//  'require' returns.  
+var {Route, Router, IndexRoute, hashHistory} = require('react-router');
+
 var NavigationBar = React.createClass({
 	// Note that propTypes is a debugging tool and that the code functions without it
 	propTypes: { },
