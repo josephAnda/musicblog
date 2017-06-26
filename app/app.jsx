@@ -23,9 +23,6 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-
-//  e.g. Creates the variable 'Route' and sets it equal to the Route property of whatever 
-//  'require' returns.  
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 
 var NavigationBar = React.createClass({
@@ -311,4 +308,10 @@ ReactDOM.render(
 	document.getElementById('app')
 );
 
+/*
+ReactDOM.render(
+	<Router history={hashHistory}>
+		<Route path=
+);
+*/
 }) ();
