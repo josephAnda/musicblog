@@ -11,10 +11,18 @@ ul.navList li {
 	padding-right: 1.5em;
 }
 
+ul.articleList {
+	border: 2px solid white;
+}
+
 p.infoText {
 	color: #2b7ab7;
 }
 
 p.about {
 	color: #2b7ab7;
+}
+
+nav.navbar {
+	background-color: #2a76b0;
 }

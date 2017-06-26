@@ -1,40 +1,34 @@
-//  [!!]  Write and render components for the remaining page elements
+
 //  [  ]  Add forms (use James K Nelson example)
 //  [  ]  Add an actual audio track that you've produced
 //  [  ]  Combine info and about row into a single component (they're way too similar)
 //  [  ]  Determine the syntax for stateless components
 //  [  ]  Try to make it so information specific to particular components are passed through as props.  You can pass
 //        values to these props that are stored in global constants declared elsewhere or obtained from JSON
-//  [!!]  Create the bootstrap column structure for the webpage
-//  [!!]  Apply Bootstrap classes to clean up presentation
 //  [  ]  Determine abstraction for the text involved in the description 
-//  [!!]  Make track information a property of the article
 //  [  ]  Incorporate design pattern that filters and maps articles with and without tracks
-//  [  ]  Use JSX to clean up the code 
 //  [  ]  Incorporate state variable (what changes in respone to user input?)
 //  [  ]  Incorporate JSON data
+
 
 (function() {
 
 var NavigationBar = React.createClass({
 	// Note that propTypes is a debugging tool and that the code functions without it
-	propTypes: {
-		
-	},
+	propTypes: { },
 
 	render: function() {
 	// Return statement is wrapped in parentheses to ensure every statement is executed 
 		return (
 
 	//  Note that like the DOM, React uses the className property to assign CSS classes 
-			React.createElement('nav', {className: "navbar navbar-toggleable-md navbar-light bg-faded"}, 
-				React.createElement('ul', {className: "navList navbar-nav"}, 
-					React.createElement(NavItem, {itemName: "Home"}),
-					React.createElement(NavItem, {itemName: "About"}),
-					React.createElement(NavItem, {itemName: "Archives"})
-				
-				)
-			)
+			<nav className="navbar navbar-toggleable-md navbar-light bg-faded">
+				<ul className="navList navbar-nav">
+					<NavItem itemName="Home" />
+					<NavItem itemName="About" />
+					<NavItem itemName="Archives" />
+				</ul>
+			</nav>
 		)
 	}
 });
@@ -48,11 +42,11 @@ var NavItem = React.createClass({
 	render: function() {
 
 		return (
-		
-			React.createElement('li', {className: "nav-item"},
-				React.createElement('a', {className: "nav-link"}, this.props.itemName)
 			
-			)
+			<li className="nav-item">
+				<a className="nav-link"> {this.props.itemName} </a>
+			</li>
+			
 		)
 	}
 });
@@ -68,17 +62,18 @@ var Track = React.createClass({
 
 		return (
 
-			React.createElement('audio', {
-				className: 'audioTrack',
-				src: this.props.source
-				}, this.props.trackName
-			)
-
+			<audio controls className="audioTrack">
+			 	<source src={this.props.source} type="audio/mpeg">
+					
+				</source>
+				{this.props.trackName}
+			</audio>
 		)
 	}
 });
 
 var Buttons = React.createClass({
+
 	propTypes: {
 		className: React.PropTypes.string.isRequired
 	},
@@ -87,13 +82,14 @@ var Buttons = React.createClass({
 
 		return (
 
-			React.createElement('a', {}, 
-				React.createElement('div', {className: this.props.className}))
-
+			<a>
+				<div className={this.props.className}>
+				</div>
+			</a>
 		)
 	}
 })
-//  Figure out how to feed JSON data to values in React
+//  [  ]  Figure out how to feed JSON data to values in React
 var Article = React.createClass({
 
 	propTypes: {
@@ -106,19 +102,15 @@ var Article = React.createClass({
 
 		return (
 
-			React.createElement('div', {className: 'articleEntry'},
-				React.createElement('h1', {}, this.props.title),
-				React.createElement('p', {}, this.props.content),
-				React.createElement(Track, {
-					trackName: this.props.track.name,
-					source: this.props.track.source
-				})
-			)
+			<div className='articleEntry'>
+				<h1>{this.props.title}</h1>
+				<p>{this.props.content}</p>
+					<Track trackName={this.props.track.name} source={this.props.track.source} />
+			</div>
 		)
 	}
 });
 
-//  [!!]  create InfoText element within BlogView
 
 var InfoText = React.createClass({
 
@@ -128,7 +120,11 @@ var InfoText = React.createClass({
 	},
 
 	render: function() {
-		return React.createElement('p', {className: this.props.className}, this.props.text)
+		return (
+			<p className={this.props.className}>
+				{this.props.text}
+			</p>
+		)
 	}
 	
 });
@@ -144,63 +140,57 @@ var InfoRow = React.createClass({
 	render: function() {
 
 		return (
-			React.createElement('div', {className: "row"}, 
-				React.createElement('div', {className: "col-md-10 col-md-offset-1"}, 
-					React.createElement(InfoText, {
-						text:  this.props.textSource.infoText,
-						className: "infoText"
-					})
-				)
-			)
+			<div className="row">
+				<div className="col-md-10 col-md-offset-1">
+					<InfoText text={this.props.textSource.infoText} className="infoText" />
+				</div>
+			</div>
+			
 		)
 	}
 });
 
 var ArticleRow = React.createClass({
 
-	propTypes: {
-		articles: React.PropTypes.array.isRequired,
-	},
+	propTypes: { articles: React.PropTypes.array.isRequired },
 
 	render: function() {
 
 		var formattedArticles = this.props.articles.map( function(post) {
-			return React.createElement(Article, post);
+			return <Article title={post.title} content={post.content} track={post.track} key={post.key}></Article>;
 		});
 
 		return (
-			React.createElement('div', {className: 'row'}, 
-				React.createElement('div', {className: "col-md-10 col-md-offset-1"},
-					React.createElement('ul', {className: "articleList"}, formattedArticles)
-				)
-			)
+
+			<div className="row">
+				<div className="col-md-10 col-md-offset-1">
+					<ul className="articleList">
+						{formattedArticles}
+					</ul>
+				</div>
+			</div>
 		)
-		
 	}
 });
 
 var AboutRow = React.createClass({
 
-	propTypes: {
-		textSource:  React.PropTypes.object.isRequired
-	},
+	propTypes: { textSource:  React.PropTypes.object.isRequired },
 
 	render: function() {
 
 		return (
-
-			React.createElement('div', {className: "row"},
-				React.createElement('div', {className: "col-md-10 col-md-offset-1"},
-				React.createElement(InfoText, {
-					text: this.props.textSource.about,
-					className: "about"
-				}))
-			)
+			<div className="row">
+				<div className="col-md-10 col-md-offset-1">
+					<InfoText text={this.props.textSource.about} className="about" />
+				</div>
+			</div>
 		)
 	}
 });
 
 var BlogView = React.createClass({
+
 	propTypes: {
 		articles: React.PropTypes.array.isRequired,
 		textSource: React.PropTypes.object.isRequired
@@ -210,14 +200,33 @@ var BlogView = React.createClass({
 
 		//  The main structure of the page is organized below . . . this is the typical React pattern for rendering the top-level view
 		return (
-			React.createElement('div', {className: "BlogView"},
-				React.createElement(NavigationBar, {}),
-				React.createElement(InfoRow, {textSource:  this.props.textSource}), 
-				React.createElement(ArticleRow, {articles:  this.props.articles}),
-				React.createElement(AboutRow, {textSource:  this.props.textSource})
-			)
+			<div className="BlogView">
+				<NavigationBar />
+				<InfoRow textSource={this.props.textSource} />
+				<ArticleRow articles={this.props.articles} />
+				<AboutRow textSource={this.props.textSource} />
+			</div>
+
 		)
 	}
+});
+
+//  [  ]  Incorporate model for form use 
+var ContactForm = React.createClass({
+  propTypes: {
+    value: React.PropTypes.object.isRequired
+  },
+
+  render: function() {
+    return (
+    	<form className="ContactForm">
+    		<input type='text' placeholder='Name (required)' value = {this.props.value.name} />
+    		<input type='text' placeholder='Email' value = {this.props.value.email} />
+    		<textarea placeholder='Description' value = {this.props.value.description} />
+    		<button type="submit">"Add Contact"</button>
+    	</form>  
+    )
+  },
 });
 
 var defaultText = {
@@ -226,7 +235,19 @@ var defaultText = {
 	about:  "Design by Joseph Anda"
 };
 
+var sampleContacts = [
+];
+
 var blogArticles = [
+	{
+		key: 3,
+		title: "Couriers", 
+		content:  "This track is a departure from the normal four-on-the-floor style and a foray into more ambient sounds.",
+		track: {
+			name: "Couriers",
+			source: "tracks/couriers.mpg"
+		}
+	},
 	{
 		key: 1,
 		title: "Rediscovering my passion", 
@@ -236,8 +257,8 @@ var blogArticles = [
 		that really means something to me from a passion standpoint it will help me make the push I need to the next level \
 		as a web designer and developer.  Stay tuned for more . . . ",
 		track: {
-			name: "",
-			source: ""
+			name: "Track1",
+			source: "tracks/rediscover.mpg"
 		}
 	},
 	{
@@ -257,25 +278,22 @@ var blogArticles = [
 //  [  ]  Read up on assigning the correct keys to arrays and items in iterated lists 
 var nav_items = [
 	{
-		key: 1,
+		key: 3,
 		name: "Home"
 	},
 	{
-		key: 2,
+		key: 4,
 		name: "About"
 	},
 	{
-		key: 3,
+		key: 5,
 		name: "Archives"
 	}
 ];
 
 ReactDOM.render(
-	React.createElement(BlogView, {
-		articles: blogArticles,
-		textSource: defaultText
-	}),
-	document.getElementById('react')
+	<BlogView articles={blogArticles} textSource={defaultText} />,
+	document.getElementById('app')
 );
 
 }) ();
