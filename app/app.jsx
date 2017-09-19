@@ -2,14 +2,15 @@
 //  [  ]  Add forms (use James K Nelson example)
 //  [  ]  Add an actual audio track that you've produced
 //  [  ]  Combine info and about row into a single component (they're way too similar)
-//  [  ]  Determine the syntax for stateless components
+//  [!!]  Determine the syntax for stateless components
+//  [  ]  Split components into separate js files
 //  [  ]  Try to make it so information specific to particular components are passed through as props.  You can pass
 //        values to these props that are stored in global constants declared elsewhere or obtained from JSON
-//  [  ]  Determine abstraction for the text involved in the description 
+//  [  ]  Determine abstraction for the text involved in the description
 //  [  ]  Incorporate design pattern that filters and maps articles with and without tracks
 //  [  ]  Incorporate state variable (what changes in respone to user input?)
 //  [  ]  Incorporate JSON data
-
+//  [  ]  Use npm to install Bootstrap and style the page with it
 
 (function() {
 
@@ -30,12 +31,12 @@ var NavigationBar = React.createClass({
 	propTypes: { },
 
 	render: function() {
-	// Return statement is wrapped in parentheses to ensure every statement is executed 
+	// Return statement is wrapped in parentheses to ensure every statement is executed
 		return (
 
-	//  Note that like the DOM, React uses the className property to assign CSS classes 
+	//  Note that like the DOM, React uses the className property to assign CSS classes
 			<nav className="navbar navbar-toggleable-md navbar-light bg-faded">
-				<ul className="navList navbar-nav">
+				<ul className="navList navbar-nav" style={{ listStyle: 'none' }} >
 					<NavItem itemName="Home" />
 					<NavItem itemName="About" />
 					<NavItem itemName="Archives" />
@@ -54,11 +55,11 @@ var NavItem = React.createClass({
 	render: function() {
 
 		return (
-			
+
 			<li className="nav-item">
 				<a className="nav-link"> {this.props.itemName} </a>
 			</li>
-			
+
 		)
 	}
 });
@@ -76,7 +77,7 @@ var Track = React.createClass({
 
 			<audio controls className="audioTrack">
 			 	<source src={this.props.source} type="audio/mpeg">
-					
+
 				</source>
 				{this.props.trackName}
 			</audio>
@@ -138,7 +139,7 @@ var InfoText = React.createClass({
 			</p>
 		)
 	}
-	
+
 });
 
 //  Auto-create row with necessary bootstrap class
@@ -157,7 +158,7 @@ var InfoRow = React.createClass({
 					<InfoText text={this.props.textSource.infoText} className="infoText" />
 				</div>
 			</div>
-			
+
 		)
 	}
 });
@@ -223,7 +224,7 @@ var BlogView = React.createClass({
 	}
 });
 
-//  [  ]  Incorporate model for form use 
+//  [  ]  Incorporate model for form use
 var ContactForm = React.createClass({
   propTypes: {
     value: React.PropTypes.object.isRequired
@@ -236,7 +237,7 @@ var ContactForm = React.createClass({
     		<input type='text' placeholder='Email' value = {this.props.value.email} />
     		<textarea placeholder='Description' value = {this.props.value.description} />
     		<button type="submit">"Add Contact"</button>
-    	</form>  
+    	</form>
     )
   },
 });
@@ -253,7 +254,7 @@ var sampleContacts = [
 var blogArticles = [
 	{
 		key: 3,
-		title: "Couriers", 
+		title: "Couriers",
 		content:  "This track is a departure from the normal four-on-the-floor style and a foray into more ambient sounds.",
 		track: {
 			name: "Couriers",
@@ -262,7 +263,7 @@ var blogArticles = [
 	},
 	{
 		key: 1,
-		title: "Rediscovering my passion", 
+		title: "Rediscovering my passion",
 		content:  "This project is perhaps the most important one I will attempt.  In a seemingly endless search for \
 		my passion in development, I have wanted to take on a multi-layered full-stack project that really pushes me to \
 		my limits in terms of development and skills.  I know that if I embrace the challenge of trying to code a website \
@@ -275,7 +276,7 @@ var blogArticles = [
 	},
 	{
 		key: 2,
-		title: "We have found space", 
+		title: "We have found space",
 		content:  "This will be the first time we venture out into open space alone.  We know that having the ability \
 		to implement our own designs and document our own work is a privilege and shall not take it for granted.  We shall \
 		this venture forth . . . ",
@@ -287,7 +288,7 @@ var blogArticles = [
 
 ];
 
-//  [  ]  Read up on assigning the correct keys to arrays and items in iterated lists 
+//  [  ]  Read up on assigning the correct keys to arrays and items in iterated lists
 var nav_items = [
 	{
 		key: 3,

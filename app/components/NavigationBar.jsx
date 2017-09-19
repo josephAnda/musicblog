@@ -9,6 +9,7 @@ var NavigationBar = React.createClass({
 		return (
 
 	//  Note that like the DOM, React uses the className property to assign CSS classes 
+	
 			<nav className="navbar navbar-toggleable-md navbar-light bg-faded">
 				<ul className="navList navbar-nav">
 					<NavItem itemName="Home" />
