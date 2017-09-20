@@ -3,7 +3,8 @@
 //  [  ]  Add an actual audio track that you've produced
 //  [  ]  Combine info and about row into a single component (they're way too similar)
 //  [!!]  Determine the syntax for stateless components
-//  [  ]  Split components into separate js files
+//  [!!]  Split components into separate js files
+//    [  ]  Remove redundant components in app.jsx and replace with references via 'require' statements
 //  [  ]  Try to make it so information specific to particular components are passed through as props.  You can pass
 //        values to these props that are stored in global constants declared elsewhere or obtained from JSON
 //  [  ]  Determine abstraction for the text involved in the description
