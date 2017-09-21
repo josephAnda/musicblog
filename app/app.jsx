@@ -26,84 +26,12 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
+
 var NavigationBar = require('NavigationBar');
-/*
-var NavigationBar = React.createClass({
-	// Note that propTypes is a debugging tool and that the code functions without it
-	propTypes: { },
+var Track = require('Track');
+var Buttons = require('Buttons');
 
-	render: function() {
-	// Return statement is wrapped in parentheses to ensure every statement is executed
-		return (
 
-	//  Note that like the DOM, React uses the className property to assign CSS classes
-			<nav className="navbar navbar-toggleable-md navbar-light bg-faded">
-				<ul className="navList navbar-nav" style={{ listStyle: 'none' }} >
-					<NavItem itemName="Home" />
-					<NavItem itemName="About" />
-					<NavItem itemName="Archives" />
-				</ul>
-			</nav>
-		)
-	}
-});
-
-var NavItem = React.createClass({
-
-	propTypes: {
-		itemName: React.PropTypes.string.isRequired
-	},
-
-	render: function() {
-
-		return (
-
-			<li className="nav-item">
-				<a className="nav-link"> {this.props.itemName} </a>
-			</li>
-
-		)
-	}
-});
-*/
-var Track = React.createClass({
-
-	propTypes: {
-		trackName: React.PropTypes.string.isRequired,
-		source: React.PropTypes.string.isRequired
-	},
-
-	render: function() {
-
-		return (
-
-			<audio controls className="audioTrack">
-			 	<source src={this.props.source} type="audio/mpeg">
-
-				</source>
-				{this.props.trackName}
-			</audio>
-		)
-	}
-});
-
-var Buttons = React.createClass({
-
-	propTypes: {
-		className: React.PropTypes.string.isRequired
-	},
-
-	render: function() {
-
-		return (
-
-			<a>
-				<div className={this.props.className}>
-				</div>
-			</a>
-		)
-	}
-})
 //  [  ]  Figure out how to feed JSON data to values in React
 var Article = React.createClass({
 
