@@ -7,9 +7,17 @@ module.exports = {
 	resolve: {
 		root: __dirname,
 		alias: {
-			
+			Article: 'app/components/Article.jsx',
+			ArticleRow: 'app/components/ArticleRow.jsx',
+			BlogView: 'app/components/BlogView.jsx',
+			Buttons: 'app/components/Buttons.jsx',
+			ContactForm: 'app/components/ContactForm.jsx',
+			NavigationBar: 'app/components/NavigationBar.jsx',
+			NavItem: 'app/components/NavItem.jsx',
+			Track: 'app/components/Track.jsx'
+
 		},
-		extensions: [ "", '.js', '.jsx']  //  This array tells webpack what extensions to process 
+		extensions: [ "", '.js', '.jsx']  //  This array tells webpack what extensions to process
 	},
 	module: {
 		loaders: [  //  loaders are for file types that webpack can't read by default

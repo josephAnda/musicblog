@@ -1,4 +1,5 @@
 var React = require('react');
+var NavItem = require('NavItem');
 
 var NavigationBar = React.createClass({
 	// Note that propTypes is a debugging tool and that the code functions without it

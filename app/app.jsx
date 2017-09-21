@@ -26,7 +26,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
-
+var NavigationBar = require('NavigationBar');
+/*
 var NavigationBar = React.createClass({
 	// Note that propTypes is a debugging tool and that the code functions without it
 	propTypes: { },
@@ -64,7 +65,7 @@ var NavItem = React.createClass({
 		)
 	}
 });
-
+*/
 var Track = React.createClass({
 
 	propTypes: {
