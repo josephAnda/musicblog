@@ -6,7 +6,7 @@
 //        values to these props that are stored in global constants declared elsewhere or obtained from JSON
 //  [  ]  Incorporate design pattern that filters and maps articles with and without tracks
 //  [  ]  Incorporate state variable (what changes in respone to user input?)
-
+//  [  ]  Wire up separate views through Router
 (function() {
 
 //  Import React when its accessed via webpack as opposed to being
@@ -16,9 +16,6 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 
-//  The two elements below are currently unused
-var ContactForm = require('ContactForm');
-var Buttons = require('Buttons');
 
 //  This is the important module
 var BlogView = require('BlogView');
