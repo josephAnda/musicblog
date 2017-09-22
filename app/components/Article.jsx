@@ -1,4 +1,5 @@
 var React = require('react');
+var Track = require('Track');
 
 var Article = React.createClass({
 

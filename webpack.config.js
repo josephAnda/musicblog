@@ -7,11 +7,16 @@ module.exports = {
 	resolve: {
 		root: __dirname,
 		alias: {
+			AboutRow: 'app/components/AboutRow.jsx',
 			Article: 'app/components/Article.jsx',
 			ArticleRow: 'app/components/ArticleRow.jsx',
+			blogArticles: 'app/components/blogArticles.js',
 			BlogView: 'app/components/BlogView.jsx',
 			Buttons: 'app/components/Buttons.jsx',
 			ContactForm: 'app/components/ContactForm.jsx',
+			defaultText: 'app/components/defaultText.js',
+			InfoText: 'app/components/InfoText.jsx',
+			InfoRow: 'app/components/InfoRow.jsx',
 			NavigationBar: 'app/components/NavigationBar.jsx',
 			NavItem: 'app/components/NavItem.jsx',
 			Track: 'app/components/Track.jsx'

@@ -1,5 +1,11 @@
 var React = require('react');
 
+//  Load view modules
+var NavigationBar = require('NavigationBar');
+var InfoRow = require('InfoRow');
+var ArticleRow = require('ArticleRow');
+var AboutRow = require('AboutRow');
+
 var BlogView = React.createClass({
 
 	propTypes: {
