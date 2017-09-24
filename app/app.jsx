@@ -19,19 +19,14 @@ var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 
 //  This is the important module
 var BlogView = require('BlogView');
-var defaultText = require('defaultText');
-var blogArticles = require('blogArticles');
-
 
 ReactDOM.render(
-	<BlogView articles={blogArticles} textSource={defaultText} />,
+	<Router history={hashHistory}>
+		<Route path="/" component={BlogView}>
+
+		</Route>
+	</Router>,
 	document.getElementById('app')
 );
 
-/*
-ReactDOM.render(
-	<Router history={hashHistory}>
-		<Route path=
-);
-*/
 }) ();
