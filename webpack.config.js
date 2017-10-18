@@ -8,6 +8,8 @@ module.exports = {
 		root: __dirname,
 		alias: {
 			AboutRow: 'app/components/AboutRow.jsx',
+			AboutView: 'app/components/AboutView.jsx',
+			ArchivesView: 'app/components/ArchivesView.jsx',
 			Article: 'app/components/Article.jsx',
 			ArticleRow: 'app/components/ArticleRow.jsx',
 			blogArticles: 'app/components/blogArticles.js',
@@ -17,6 +19,7 @@ module.exports = {
 			defaultText: 'app/components/defaultText.js',
 			InfoText: 'app/components/InfoText.jsx',
 			InfoRow: 'app/components/InfoRow.jsx',
+			Main: 'app/components/Main.jsx',
 			NavigationBar: 'app/components/NavigationBar.jsx',
 			NavItem: 'app/components/NavItem.jsx',
 			Track: 'app/components/Track.jsx'

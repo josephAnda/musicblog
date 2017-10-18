@@ -18,8 +18,10 @@ var ArchivesView = React.createClass({
 		return (
 			<div className="ArchivesView">
         <h2>Archives View</h2>
+        /*
 				<InfoRow textSource={this.props.textSource} />
 				<ArticleRow articles={this.props.articles} />
+				*/
 
 			</div>
 

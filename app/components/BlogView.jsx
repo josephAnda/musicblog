@@ -1,7 +1,7 @@
 var React = require('react');
 
 //  Load view modules
-var NavigationBar = require('NavigationBar');
+
 
 var InfoRow = require('InfoRow');
 var ArticleRow = require('ArticleRow');
@@ -26,7 +26,6 @@ var BlogView = React.createClass({
 		//  The main structure of the page is organized below . . . this is the typical React pattern for rendering the top-level view
 		return (
 			<div className="BlogView">
-				<NavigationBar />
 
 				<h2>Blog View</h2>
 				<InfoRow textSource={this.props.textSource} />

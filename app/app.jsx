@@ -1,4 +1,5 @@
 
+//  [  ]  Include AboutRow component in AboutView component 
 //  [  ]  Add forms (use James K Nelson example)
 //  [  ]  Add an actual audio track that you've produced
 //  [  ]  Combine info and about row into a single component (they're way too similar)
@@ -19,11 +20,16 @@ var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 
 //  This is the important module
 var BlogView = require('BlogView');
+var Main = require('Main');
+var AboutView = require('AboutView');
+var ArchivesView = require('ArchivesView');
 
 ReactDOM.render(
 	<Router history={hashHistory}>
-		<Route path="/" component={BlogView}>
-
+		<Route path="/" component={Main}>
+			<Route path="about" component={AboutView} />
+			/*<Route path="archives" component={ArchivesView} />*/
+			<IndexRoute component={BlogView} />
 		</Route>
 	</Router>,
 	document.getElementById('app')

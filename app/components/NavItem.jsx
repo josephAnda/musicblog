@@ -8,9 +8,13 @@ var NavItem = React.createClass({
 
 	render: function() {
 
+		var styles = {
+			paddingRight: "2em"
+		};
+
 		return (
 
-			<li className="nav-item">
+			<li className="nav-item" style={styles}>
 				<a className="nav-link"> {this.props.itemName} </a>
 			</li>
 
