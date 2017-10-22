@@ -5,6 +5,16 @@ var ContactForm = React.createClass({
     value: React.PropTypes.object.isRequired
   },
 
+  getDefaultProps: function() {
+    return {
+      value: {
+        name: "",
+        email: "",
+        description: ""
+      }
+    };
+  },
+
   render: function() {
     return (
     	<form className="ContactForm">

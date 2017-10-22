@@ -16,6 +16,7 @@ module.exports = {
 			BlogView: 'app/components/BlogView.jsx',
 			Buttons: 'app/components/Buttons.jsx',
 			ContactForm: 'app/components/ContactForm.jsx',
+			ContactView: 'app/components/ContactView.jsx',
 			defaultText: 'app/components/defaultText.js',
 			InfoText: 'app/components/InfoText.jsx',
 			InfoRow: 'app/components/InfoRow.jsx',

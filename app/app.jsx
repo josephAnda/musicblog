@@ -1,5 +1,5 @@
 
-//  [  ]  Include AboutRow component in AboutView component 
+//  [  ]  Include AboutRow component in AboutView component
 //  [  ]  Add forms (use James K Nelson example)
 //  [  ]  Add an actual audio track that you've produced
 //  [  ]  Combine info and about row into a single component (they're way too similar)
@@ -23,12 +23,14 @@ var BlogView = require('BlogView');
 var Main = require('Main');
 var AboutView = require('AboutView');
 var ArchivesView = require('ArchivesView');
+var ContactView = require('ContactView');
 
 ReactDOM.render(
 	<Router history={hashHistory}>
 		<Route path="/" component={Main}>
 			<Route path="about" component={AboutView} />
 			<Route path="archives" component={ArchivesView} />
+			<Route path="contact" component={ContactView} />
 			<IndexRoute component={BlogView} />
 		</Route>
 	</Router>,
