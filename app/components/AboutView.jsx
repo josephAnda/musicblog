@@ -6,10 +6,6 @@ var React = require('react');
 
 var AboutView = React.createClass({
 
-	propTypes: {
-		articles: React.PropTypes.array.isRequired,
-		textSource: React.PropTypes.object.isRequired
-	},
 
 	render: function() {
 

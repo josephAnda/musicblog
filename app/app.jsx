@@ -28,7 +28,7 @@ ReactDOM.render(
 	<Router history={hashHistory}>
 		<Route path="/" component={Main}>
 			<Route path="about" component={AboutView} />
-			/*<Route path="archives" component={ArchivesView} />*/
+			<Route path="archives" component={ArchivesView} />
 			<IndexRoute component={BlogView} />
 		</Route>
 	</Router>,
