@@ -1,24 +1,17 @@
 var React = require('react');
 
-var Track = React.createClass({
 
-	propTypes: {
-		trackName: React.PropTypes.string.isRequired,
-		source: React.PropTypes.string.isRequired
-	},
+var Track = (props) => {
 
-	render: function() {
-
-		return (
+	return (
 
 			<audio controls className="audioTrack">
-			 	<source src={this.props.source} type="audio/mpeg">
+			 	<source src={props.source} type="audio/mpeg">
 
 				</source>
-				{this.props.trackName}
+				{props.trackName}
 			</audio>
 		)
-	}
-});
 
+};
 module.exports = Track;
