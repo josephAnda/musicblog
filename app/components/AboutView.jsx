@@ -4,10 +4,8 @@ var React = require('react');
 
 
 
-var AboutView = React.createClass({
-
-
-	render: function() {
+//  ES6 Arrow function used below
+var AboutView = (props) => {
 
 		//  The main structure of the page is organized below . . . this is the typical React pattern for rendering the top-level view
 		return (
@@ -20,7 +18,6 @@ var AboutView = React.createClass({
 			</div>
 
 		)
-	}
-});
+};
 
 module.exports = AboutView;
