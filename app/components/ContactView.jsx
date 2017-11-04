@@ -6,7 +6,7 @@ var ContactForm = require('ContactForm');
 var ContactView = (props) => {
   return (
     <div className="ContactView">
-          <h2>Contact View</h2>
+          <h2>Contact Me</h2>
           <p>
             Use the form below to contact me.
           </p>
