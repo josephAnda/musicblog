@@ -5,7 +5,7 @@ var Main = (props) => {
   return (
     <div className="MainView">
       <NavigationBar />
-          <h2>Main View</h2>
+          <h2>The Atmosphere Blog</h2>
           {props.children}
         </div>
   )

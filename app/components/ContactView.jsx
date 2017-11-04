@@ -8,7 +8,7 @@ var ContactView = (props) => {
     <div className="ContactView">
           <h2>Contact Me</h2>
           <p>
-            Use the form below to contact me.
+            I would love to hear from you!  Use the form below to contact me.
           </p>
           <ContactForm />
     </div>
