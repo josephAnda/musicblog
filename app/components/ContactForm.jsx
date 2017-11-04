@@ -1,30 +1,30 @@
 var React = require('react');
 
-var ContactForm = React.createClass({
-  propTypes: {
-    value: React.PropTypes.object.isRequired
-  },
+var ContactForm = (props) => {
+  // propTypes: {
+  //   value: React.PropTypes.object.isRequired
+  // },
+  //
+  // getDefaultProps: function() {
+  //   return {
+  //     value: {
+  //       name: "",
+  //       email: "",
+  //       description: ""
+  //     }
+  //   };
+  // },
 
-  getDefaultProps: function() {
-    return {
-      value: {
-        name: "",
-        email: "",
-        description: ""
-      }
-    };
-  },
 
-  render: function() {
     return (
     	<form className="ContactForm">
-    		<input type='text' placeholder='Name (required)' value = {this.props.value.name} />
-    		<input type='text' placeholder='Email' value = {this.props.value.email} />
-    		<textarea placeholder='Description' value = {this.props.value.description} />
+    		<input type='text' placeholder='Name (required)'  />
+    		<input type='text' placeholder='Email'  />
+    		<textarea placeholder='Description'  />
     		<button type="submit">"Add Contact"</button>
     	</form>
     )
-  },
-});
+
+};
 
 module.exports = ContactForm;
