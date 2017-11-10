@@ -10,13 +10,9 @@
 //  [  ]  Wire up separate views through Router
 (function() {
 
-//  Import React when its accessed via webpack as opposed to being
-//  made available globally via a script tag.  Require is via npm
-
 var React = require('react');
 var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
-
 
 //  This is the important module
 var BlogView = require('BlogView');
@@ -24,9 +20,6 @@ var Main = require('Main');
 var AboutView = require('AboutView');
 var ArchivesView = require('ArchivesView');
 var ContactView = require('ContactView');
-
-
-
 
 ReactDOM.render(
 	<Router history={hashHistory}>
