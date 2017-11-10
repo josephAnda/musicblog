@@ -25,6 +25,9 @@ var AboutView = require('AboutView');
 var ArchivesView = require('ArchivesView');
 var ContactView = require('ContactView');
 
+
+
+
 ReactDOM.render(
 	<Router history={hashHistory}>
 		<Route path="/" component={Main}>

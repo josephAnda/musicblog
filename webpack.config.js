@@ -1,5 +1,20 @@
+var webpack = require('webpack');
+
 module.exports = {
-	entry: './app/app.jsx', //  Where webpack should start processing the code
+	entry: [  //  Load in jquery and css for page
+
+		'./app/app.jsx'
+	],
+	externals: {
+		jquery: 'jQuery' // allows bootsrtrap to attach methods to jquery object
+	},
+	plugins: [
+		new webpack.ProvidePlugin({
+			'$': 'jquery',
+			'jQuery': 'jquery'
+		})
+	],
+	//  Where webpack should start processing the code
 	output: {
 		path: __dirname,  //  Node.js syntax for path to current folder
 		filename: './public/bundle.js'
