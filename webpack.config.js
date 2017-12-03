@@ -38,7 +38,8 @@ module.exports = {
 			Main: 'app/components/Main.jsx',
 			NavigationBar: 'app/components/NavigationBar.jsx',
 			NavItem: 'app/components/NavItem.jsx',
-			Track: 'app/components/Track.jsx'
+			Track: 'app/components/Track.jsx',
+			applicationStyles: 'app/styles/app.css'
 
 		},
 		extensions: [ "", '.js', '.jsx']  //  This array tells webpack what extensions to process

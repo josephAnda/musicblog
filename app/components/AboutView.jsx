@@ -7,7 +7,12 @@ var React = require('react');
 //  ES6 Arrow function used below
 var AboutView = (props) => {
 
+
 		//  The main structure of the page is organized below . . . this is the typical React pattern for rendering the top-level view
+		var viewStyles = {
+			backgroundColor: "black",
+			color: "white"
+		};
 		return (
 			<div className="AboutView">
 		        <h2>About View</h2>
