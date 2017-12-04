@@ -18,10 +18,10 @@ var ContactForm = (props) => {
 
     return (
     	<form className="ContactForm">
-    		<input type='text' placeholder='Name (required)'  />
-    		<input type='text' placeholder='Email'  />
-    		<textarea placeholder='Description'  />
-    		<button type="submit">"Add Contact"</button>
+    		<input type='text' placeholder='Name (required)'  /><br />
+    		<input type='text' placeholder='Email'  /><br />
+    		<div className="textArea"><textarea placeholder='Description'  /></div><br />
+    		<div className="submitButton"><button type="submit">"Add Contact"</button></div>
     	</form>
     )
 

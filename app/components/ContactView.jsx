@@ -5,7 +5,7 @@ var ContactForm = require('ContactForm');
 
 var ContactView = (props) => {
   return (
-    <div className="ContactView">
+    <div className="ContactView col-md-10 offset-md-1">
           <h2>Contact Me</h2>
           <p>
             I would love to hear from you!  Use the form below to contact me.

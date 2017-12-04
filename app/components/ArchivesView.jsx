@@ -11,6 +11,9 @@ var ArchivesView = React.createClass({
 		return (
 			<div className="ArchivesView">
         		<h2>Archives View</h2>
+						<p>The first few releases are unrelated, but complete.  In the beginning and end of each track, we wove together the
+							transitions with a few signature sounds.  From this, we decided that we would be able to create a
+							progression for the next set of sounds.</p>
 			</div>
 
 		)

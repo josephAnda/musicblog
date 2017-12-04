@@ -1,3 +1,35 @@
 html, body {
   height: 100%;
+
+}
+
+div#app {
+  background-color: black;
+  height: 100%;
+}
+
+form.ContactForm {
+  float: left;
+  background-color: blue;
+  width: 40%;
+  border-radius: 1em;
+}
+
+.ContactForm input {
+  width: 40%;
+}
+
+
+.submitButton, .textarea {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.textArea {
+  width: 80%;
+}
+
+.ContactForm input, .submitButton, .textArea {
+  margin-left: 10%;
+  margin-top: 5%;
 }
