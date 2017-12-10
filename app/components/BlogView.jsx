@@ -24,9 +24,9 @@ var BlogView = React.createClass({
 	},
 	render: function() {
 		//  The main structure of the page is organized below . . . this is the typical React pattern for rendering the top-level view
-	
+
 		return (
-			<div  className="BlogView">
+			<div  className="BlogView col-md-11 offset-md-1">
 
 				<h2>Blog View</h2>
 				<InfoRow textSource={this.props.textSource} />

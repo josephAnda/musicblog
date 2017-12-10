@@ -1,11 +1,11 @@
 var blogArticles = [
 	{
 		key: 3,
-		title: "Couriers",
-		content:  "This track is a departure from the normal four-on-the-floor style and a foray into more ambient sounds.",
+		title: "Static Grunge",
+		content:  "This is a foray into the world of pitch-gliding and white noise.",
 		track: {
-			name: "Couriers",
-			source: "tracks/couriers.mpg"
+			name: "Static Grunge",
+			source: "tracks/staticGrunge.mpg"
 		}
 	},
 	{

@@ -8,17 +8,17 @@ var NavigationBar = (props) => {
 		return (
 			<div>
 				<nav>
-				<IndexLink to="/">Blog View</IndexLink>
+				<IndexLink className="nav-link active" to="/">The Atmosphere Blog</IndexLink>
 				<div >
-					<ul >
-	      		<li >
-							<Link  to="/about" >About</Link>
+					<ul className="nav justify-content-center">
+	      		<li className="nav-item">
+							<Link className="nav-link" to="/about" >About</Link>
 						</li>
-						<li >
-							<Link  to="/archives" >Archives</Link>
+						<li className="nav-item">
+							<Link className="nav-link" to="/archives" >Archives</Link>
 						</li>
-						<li>
-							<Link to="/contact" >Contact</Link>
+						<li className="nav-item">
+							<Link className="nav-link" to="/contact" >Contact</Link>
 						</li>
 					</ul>
 				</div>

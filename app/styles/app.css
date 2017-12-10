@@ -3,6 +3,9 @@ html, body {
 
 }
 
+.nav-link.active {
+  font-size: 2em;
+}
 div#app {
   background-color: black;
   height: 100%;

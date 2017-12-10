@@ -11,9 +11,11 @@ var Main = (props) => {
   return (
     <div style={viewStyles} className="MainView">
       <NavigationBar />
-          <h2>The Atmosphere Blog</h2>
+          <div className="col-md-4 offset-md-4">
+            <h2>The Atmosphere Blog</h2>
+          </div>
           {props.children}
-        </div>
+    </div>
   )
 };
 module.exports = Main;

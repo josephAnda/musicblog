@@ -14,7 +14,7 @@ var AboutView = (props) => {
 			color: "white"
 		};
 		return (
-			<div className="AboutView">
+			<div className="AboutView col-md-10 offset-md-1">
 		        <h2>About View</h2>
 		        <p>
 		        	Click on any of the above links to find out more about that element of my production goals.
