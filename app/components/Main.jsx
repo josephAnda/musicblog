@@ -11,9 +11,7 @@ var Main = (props) => {
   return (
     <div style={viewStyles} className="MainView">
       <NavigationBar />
-          <div className="col-md-4 offset-md-4">
-            <h2>The Atmosphere Blog</h2>
-          </div>
+          
           {props.children}
     </div>
   )

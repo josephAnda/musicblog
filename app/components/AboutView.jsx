@@ -15,10 +15,13 @@ var AboutView = (props) => {
 		};
 		return (
 			<div className="AboutView col-md-10 offset-md-1">
-		        <h2>About View</h2>
+		        <h2>About Atmosphere</h2>
 		        <p>
-		        	Click on any of the above links to find out more about that element of my production goals.
-		        	Feel free to use any of the contact links to find any additional information.
+		        	The Atmosphere Blog was started December 30, 2017 by Joseph Anda.  The purpose of the blog is simple:
+							Compile in one digital space a variety of EDM tracks paired with his own work.  To carve a space among
+							established, talented artists is a tall order, though, so original productions occupy a separate space
+							in the page.  Each post is designed to inform the reader on the background of the artist and tracks, as
+							well as the tracks themselves.
 		        </p>
 			</div>
 

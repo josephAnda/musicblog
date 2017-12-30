@@ -28,7 +28,7 @@ var BlogView = React.createClass({
 		return (
 			<div  className="BlogView col-md-11 offset-md-1">
 
-				<h2>Blog View</h2>
+				<h2>Sonic Portal</h2>
 				<InfoRow textSource={this.props.textSource} />
 				<ArticleRow articles={this.props.articles} />
 				<AboutRow textSource={this.props.textSource} />

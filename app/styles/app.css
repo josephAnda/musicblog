@@ -6,6 +6,12 @@ html, body {
 .nav-link.active {
   font-size: 2em;
 }
+
+nav {
+  background-color: rgba(120, 118, 115, 0.7);
+  margin-bottom: 4em;
+}
+
 div#app {
   background-color: black;
   height: 100%;
