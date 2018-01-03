@@ -1,13 +1,14 @@
-
+//  [!!]  Create a more aesthetic form (use form design examples on internet)
 //  [  ]  Include AboutRow component in AboutView component
-//  [  ]  Add forms (use James K Nelson example)
+//  [  ]  Make forms functional (use James K Nelson example)
 //  [  ]  Add an actual audio track that you've produced
 //  [  ]  Combine info and about row into a single component (they're way too similar)
 //  [  ]  Try to make it so information specific to particular components are passed through as props.  You can pass
 //        values to these props that are stored in global constants declared elsewhere or obtained from JSON
-//  [  ]  Incorporate design pattern that filters and maps articles with and without tracks
 //  [  ]  Incorporate state variable (what changes in respone to user input?)
-//  [  ]  Wire up separate views through Router
+//  [!!]  Wire up separate views through Router
+//  [  ]  Add artfully integrated pictures or background art (recruit Michael for photography??)
+
 (function() {
 
 var React = require('react');
