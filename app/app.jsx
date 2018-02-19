@@ -1,4 +1,8 @@
-//  [!!]  Create a more aesthetic form (use form design examples on internet)
+
+//  [  ]  Draft concepts for the background art and main design
+//  [  ]  Use blog examples to generate at least one full-blown article with interesting content
+//  [  ]  Figure out how to market the page (beyond resume since people don't read it apparently)
+//  ---------------------------------------------------------------------------------------------------
 //  [  ]  Include AboutRow component in AboutView component
 //  [  ]  Make forms functional (use James K Nelson example)
 //  [  ]  Add an actual audio track that you've produced

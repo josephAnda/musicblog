@@ -31,6 +31,25 @@ var blogArticles = [
 			name: "",
 			source: ""
 		}
+	},
+	{
+		key: 4,
+		title: "No Creative Restrictions",
+		content: "I always assumed that writing a blog would be easy.  After all, when I compared the task of putting \
+		together eloquent web-prose to building the website from the ground-up, how difficult could spewing out a few \
+		chunks of digital text be?  Very difficult, it turned out.  Sure, it seemed daunting to navigate through the \
+		endless arrays of tutorials, technically dense web explanations, and books that only seem to tangentially discuss \
+		the problem you’re trying to code your way around.  In many ways, though it seemed more daunting to find meaningful \
+		things to express on this platform -- things that would (in my head at least) inspire me to see this project to its \
+		completion.  The difficulty lies not in crafting the pieces but in releasing my apprehension to let my thoughts flow \
+		without inhibition.  Up until this point, I have exercised a level of restraint in my writing that in many ways has \
+		stifled the creative direction of my work, but no more.  If I’m going to use content creation as the driving force for \
+		software engineering projects  then I need to substantially lower the bar for my raw creative output.  This article will\
+		be the first to be uploaded the the website via a text file and JSON.",
+		track: {
+			name: "",
+			source: ""
+		}
 	}
 
 ];
