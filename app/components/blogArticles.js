@@ -50,6 +50,15 @@ var blogArticles = [
 			name: "",
 			source: ""
 		}
+	},
+	{
+		key: 5,
+		title: "Tesseract Build",
+		content: "This is actually a bit of an Ilan Bluestone cover.  One particular melody is used but the rest was a rework",
+		track: {
+			name: "Tesseract Build",
+			source: "tracks/tesseract_build.mp3"
+		}
 	}
 
 ];

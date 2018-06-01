@@ -1,4 +1,4 @@
-	var React = require('react');
+var React = require('react');
 var Track = require('Track');
 
 var Article = React.createClass({
@@ -16,7 +16,7 @@ var Article = React.createClass({
 			<div className='articleEntry'>
 				<h1>{this.props.title}</h1>
 				<p>{this.props.content}</p>
-					{/* <Track trackName={this.props.track.name} source={this.props.track.source} /> */}
+					<Track trackName={this.props.track.name} source={this.props.track.source} /> 
 			</div>
 		)
 	}
