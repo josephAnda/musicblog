@@ -59,6 +59,15 @@ var blogArticles = [
 			name: "Tesseract Build",
 			source: "tracks/tesseract_build.mp3"
 		}
+	},
+	{
+		key: 6,
+		title: "Rale City",
+		content: "I got this much of the track out before the whole system started crashing.",
+		track: {
+			name: "Rale City",
+			source: "tracks/raleCity.mp3"
+		}
 	}
 
 ];
